@@ -52,7 +52,7 @@ int main(int argc, char **argv)
     int ret, num_of_ret;
 
     // 创建监听用的socket描述符lfd
-    int lfd = socket_bind_listen(srvip, port);
+    int lfd = tcp_socket_bind_listen(srvip, port);
 
     // 创建epoll根结点描述符
     int epfd = epoll_create(MAXEPOLLSIZE);

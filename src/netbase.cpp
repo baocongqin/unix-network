@@ -1,6 +1,6 @@
 #include <apue.h>
 
-int socket_bind_listen(const char *ip_bind, const in_port_t port)
+int tcp_socket_bind_listen(const char *ip_bind, const in_port_t port)
 {
 
     int op = 1, ret, lfd;
