@@ -1,5 +1,7 @@
 #编译器
 cc=g++
+#参数
+flags=-I../include
 # 获取src目录下所.cpp文件列表 形如main.cpp test.cpp app.cpp hello.cpp....
 all_src_files:=$(notdir $(wildcard src/*.cpp))
 # 替换.o 为.cpp
