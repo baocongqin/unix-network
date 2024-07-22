@@ -2,7 +2,8 @@
 #define _APUE_H
 
 
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>          /* See NOTES */
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -16,7 +17,6 @@
 #include <sys/epoll.h>
 
 
-using namespace std;
 
 //小缓冲区和最大listen数
 #define  MINIBUFSIZ 128
@@ -33,7 +33,7 @@ typedef struct sockaddr_in SOCKADDRIN,*PSOCKADDRIN;
 typedef struct sockaddr    SOCKADDR,  *PSOCKADDR;
 typedef struct epoll_event EPOLLEVENT,*PEPOLLEVENT;
 
-int socket_bind_listen(const char *ip_bind, const in_port_t port);
+int tcp_socket_bind_listen(const char *ip_bind, const in_port_t port);
 char *ip_from_sockaddr(PSOCKADDRIN paddr);
 
 #endif
